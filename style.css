@@ -1,0 +1,76 @@
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif;}
+
+body{
+    background-color: #a2a2a2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 1rem;
+}
+
+.checkbox-container{
+    background-color: white;
+    color: black;
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.checkbox-container .checkbox-header{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-left: 5rem;
+}
+
+.checkbox .checkbox-left{
+    width: 100px;
+    height: 40px;
+    background-color: #f2f2f2;
+    border-radius: 50px;
+    border: 1px solid #a2a2a2;
+    margin-right: 1rem;
+    position: relative;
+    transition: background-color 0.5s;
+}
+
+.checkbox-left .checkbox-ball{
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background-color: #424242;
+    border-radius: 50%;
+    z-index: 5;
+    transition: left 0.5s;
+}
+
+.checkbox-left.checked .checkbox-ball{
+    animation: animCheckbox 0.5s linear ;
+    left: calc(100px - 38px);
+}
+
+.checkbox-left.checked{
+    background-color: #a2a2a2;
+}
+
+@keyframes animCheckbox {
+    0%{ transform: scale(1);}
+    50%{ transform: scale(1.25);}
+    100%{ transform: scale(1);}
+}
+
+.checkbox .checkbox-right{
+    font-size: 1.2rem;
+}
+
+
+
+
